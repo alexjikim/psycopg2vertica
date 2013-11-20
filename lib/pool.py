@@ -24,7 +24,7 @@ This module implements thread-safe (and not) connection pools.
 # FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
 # License for more details.
 
-import psycopg2
+import psycopg2vertica
 
 try:
     import logging
@@ -54,7 +54,7 @@ except:
         sys.stderr.write(' '.join(args)+'\n')
 
 
-class PoolError(psycopg2.Error):
+class PoolError(psycopg2vertica.Error):
     pass
 
 
@@ -85,7 +85,7 @@ class AbstractConnectionPool(object):
 
     def _connect(self, key=None):
         """Create a new connection and assign it to 'key' if not None."""
-        conn = psycopg2.connect(*self._args, **self._kwargs)
+        conn = psycopg2vertica.connect(*self._args, **self._kwargs)
         if key is not None:
             self._used[key] = conn
             self._rused[id(conn)] = key

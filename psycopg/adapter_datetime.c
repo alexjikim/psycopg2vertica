@@ -213,7 +213,7 @@ pydatetime_del(PyObject* self)
 static PyObject *
 pydatetime_repr(pydatetimeObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.datetime object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.datetime object at %p>",
                                 self);
 }
 
@@ -225,7 +225,7 @@ pydatetime_repr(pydatetimeObject *self)
 PyTypeObject pydatetimeType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.datetime",
+    "psycopg2vertica._psycopg.datetime",
     sizeof(pydatetimeObject),
     0,
     pydatetime_dealloc, /*tp_dealloc*/

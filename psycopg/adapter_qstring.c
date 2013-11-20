@@ -287,7 +287,7 @@ qstring_del(PyObject* self)
 static PyObject *
 qstring_repr(qstringObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.QuotedString object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.QuotedString object at %p>",
                                 self);
 }
 
@@ -299,7 +299,7 @@ qstring_repr(qstringObject *self)
 PyTypeObject qstringType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.QuotedString",
+    "psycopg2vertica._psycopg.QuotedString",
     sizeof(qstringObject),
     0,
     qstring_dealloc, /*tp_dealloc*/

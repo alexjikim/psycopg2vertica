@@ -217,7 +217,7 @@ mxdatetime_del(PyObject* self)
 static PyObject *
 mxdatetime_repr(mxdatetimeObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.MxDateTime object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.MxDateTime object at %p>",
                                 self);
 }
 
@@ -229,7 +229,7 @@ mxdatetime_repr(mxdatetimeObject *self)
 PyTypeObject mxdatetimeType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.MxDateTime",
+    "psycopg2vertica._psycopg.MxDateTime",
     sizeof(mxdatetimeObject),
     0,
     mxdatetime_dealloc, /*tp_dealloc*/

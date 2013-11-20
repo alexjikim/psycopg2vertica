@@ -180,7 +180,7 @@ pdecimal_del(PyObject* self)
 static PyObject *
 pdecimal_repr(pdecimalObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.Float object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.Float object at %p>",
                                 self);
 }
 
@@ -193,7 +193,7 @@ pdecimal_repr(pdecimalObject *self)
 PyTypeObject pdecimalType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.Decimal",
+    "psycopg2vertica._psycopg.Decimal",
     sizeof(pdecimalObject),
     0,
     pdecimal_dealloc, /*tp_dealloc*/

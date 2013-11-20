@@ -164,7 +164,7 @@ isqlquote_del(PyObject* self)
 PyTypeObject isqlquoteType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.ISQLQuote",
+    "psycopg2vertica._psycopg.ISQLQuote",
     sizeof(isqlquoteObject),
     0,
     isqlquote_dealloc, /*tp_dealloc*/

@@ -158,7 +158,7 @@ asis_del(PyObject* self)
 static PyObject *
 asis_repr(asisObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.AsIs object at %p>", self);
+    return PyString_FromFormat("<psycopg2vertica._psycopg.AsIs object at %p>", self);
 }
 
 
@@ -170,7 +170,7 @@ asis_repr(asisObject *self)
 PyTypeObject asisType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.AsIs",
+    "psycopg2vertica._psycopg.AsIs",
     sizeof(asisObject),
     0,
     asis_dealloc, /*tp_dealloc*/

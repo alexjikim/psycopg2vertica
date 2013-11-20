@@ -62,7 +62,7 @@ if sys.version_info[0] >= 2 and sys.version_info[1] >= 4:
             RuntimeWarning)
 del sys, warnings
 
-from psycopg2 import tz
+from psycopg2vertica import tz
 
 # Import the DBAPI-2.0 stuff into top-level module.
 
@@ -80,7 +80,7 @@ from _psycopg import __version__
 
 # Register default adapters.
 
-import psycopg2.extensions as _ext
+import psycopg2vertica.extensions as _ext
 _ext.register_adapter(tuple, _ext.SQL_IN)
 
 __all__ = filter(lambda k: not k.startswith('_'), locals().keys())

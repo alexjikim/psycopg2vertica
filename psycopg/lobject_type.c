@@ -388,7 +388,7 @@ lobject_repr(lobjectObject *self)
 PyTypeObject lobjectType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.lobject",
+    "psycopg2vertica._psycopg.lobject",
     sizeof(lobjectObject),
     0,
     lobject_dealloc, /*tp_dealloc*/

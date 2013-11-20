@@ -412,11 +412,11 @@ else:
 
 sources = map(lambda x: os.path.join('psycopg', x), sources)
 
-ext.append(Extension("psycopg2._psycopg", sources,
+ext.append(Extension("psycopg2vertica._psycopg", sources,
                      define_macros=define_macros,
                      include_dirs=include_dirs,
                      undef_macros=[]))
-setup(name="psycopg2",
+setup(name="psycopg2vertica",
       version=PSYCOPG_VERSION,
       maintainer="Federico Di Gregorio",
       maintainer_email="fog@initd.org",
@@ -430,8 +430,8 @@ setup(name="psycopg2",
       long_description="\n".join(__doc__.split("\n")[2:]),
       classifiers=filter(None, classifiers.split("\n")),
       data_files=data_files,
-      package_dir={'psycopg2':'lib'},
-      packages=['psycopg2'],
+      package_dir={'psycopg2vertica':'lib'},
+      packages=['psycopg2vertica'],
       cmdclass={ 'build_ext': psycopg_build_ext },
       ext_modules=ext)
 

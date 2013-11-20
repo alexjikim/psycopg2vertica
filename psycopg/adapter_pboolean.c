@@ -170,7 +170,7 @@ pboolean_del(PyObject* self)
 static PyObject *
 pboolean_repr(pbooleanObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.Boolean object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.Boolean object at %p>",
                                 self);
 }
 
@@ -183,7 +183,7 @@ pboolean_repr(pbooleanObject *self)
 PyTypeObject pbooleanType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.Boolean",
+    "psycopg2vertica._psycopg.Boolean",
     sizeof(pbooleanObject),
     0,
     pboolean_dealloc, /*tp_dealloc*/

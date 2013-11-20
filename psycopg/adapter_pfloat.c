@@ -162,7 +162,7 @@ pfloat_del(PyObject* self)
 static PyObject *
 pfloat_repr(pfloatObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.Float object at %p>",
+    return PyString_FromFormat("<psycopg2vertica._psycopg.Float object at %p>",
                                 self);
 }
 
@@ -175,7 +175,7 @@ pfloat_repr(pfloatObject *self)
 PyTypeObject pfloatType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.Float",
+    "psycopg2vertica._psycopg.Float",
     sizeof(pfloatObject),
     0,
     pfloat_dealloc, /*tp_dealloc*/

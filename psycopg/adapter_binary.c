@@ -322,7 +322,7 @@ binary_del(PyObject* self)
 static PyObject *
 binary_repr(binaryObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.Binary object at %p>", self);
+    return PyString_FromFormat("<psycopg2vertica._psycopg.Binary object at %p>", self);
 }
 
 /* object type */
@@ -333,7 +333,7 @@ binary_repr(binaryObject *self)
 PyTypeObject binaryType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.Binary",
+    "psycopg2vertica._psycopg.Binary",
     sizeof(binaryObject),
     0,
     binary_dealloc, /*tp_dealloc*/

@@ -433,24 +433,24 @@ static struct {
     PyObject **base;
     const char *docstr;
 } exctable[] = {
-    { "psycopg2.Error", &Error, 0, Error_doc },
-    { "psycopg2.Warning", &Warning, 0, Warning_doc },
-    { "psycopg2.InterfaceError", &InterfaceError, &Error, InterfaceError_doc },
-    { "psycopg2.DatabaseError", &DatabaseError, &Error, DatabaseError_doc },
-    { "psycopg2.InternalError", &InternalError, &DatabaseError, InternalError_doc },
-    { "psycopg2.OperationalError", &OperationalError, &DatabaseError,
+    { "psycopg2vertica.Error", &Error, 0, Error_doc },
+    { "psycopg2vertica.Warning", &Warning, 0, Warning_doc },
+    { "psycopg2vertica.InterfaceError", &InterfaceError, &Error, InterfaceError_doc },
+    { "psycopg2vertica.DatabaseError", &DatabaseError, &Error, DatabaseError_doc },
+    { "psycopg2vertica.InternalError", &InternalError, &DatabaseError, InternalError_doc },
+    { "psycopg2vertica.OperationalError", &OperationalError, &DatabaseError,
         OperationalError_doc },
-    { "psycopg2.ProgrammingError", &ProgrammingError, &DatabaseError,
+    { "psycopg2vertica.ProgrammingError", &ProgrammingError, &DatabaseError,
         ProgrammingError_doc },
-    { "psycopg2.IntegrityError", &IntegrityError, &DatabaseError,
+    { "psycopg2vertica.IntegrityError", &IntegrityError, &DatabaseError,
         IntegrityError_doc },
-    { "psycopg2.DataError", &DataError, &DatabaseError, DataError_doc },
-    { "psycopg2.NotSupportedError", &NotSupportedError, &DatabaseError,
+    { "psycopg2vertica.DataError", &DataError, &DatabaseError, DataError_doc },
+    { "psycopg2vertica.NotSupportedError", &NotSupportedError, &DatabaseError,
         NotSupportedError_doc },
 #ifdef PSYCOPG_EXTENSIONS
-    { "psycopg2.extensions.QueryCanceledError", &QueryCanceledError,
+    { "psycopg2vertica.extensions.QueryCanceledError", &QueryCanceledError,
       &OperationalError, QueryCanceledError_doc },
-    { "psycopg2.extensions.TransactionRollbackError",
+    { "psycopg2vertica.extensions.TransactionRollbackError",
       &TransactionRollbackError, &OperationalError,
       TransactionRollbackError_doc },
 #endif
@@ -781,10 +781,10 @@ init_psycopg(void)
     pyDeltaTypeP = PyObject_GetAttrString(pyDateTimeModuleP, "timedelta");
 
     /* import psycopg2.tz anyway (TODO: replace with C-level module?) */
-    pyPsycopgTzModule = PyImport_ImportModule("psycopg2.tz");
+    pyPsycopgTzModule = PyImport_ImportModule("psycopg2vertica.tz");
     if (pyPsycopgTzModule == NULL) {
-        Dprintf("initpsycopg: can't import psycopg2.tz module");
-        PyErr_SetString(PyExc_ImportError, "can't import psycopg2.tz module");
+        Dprintf("initpsycopg: can't import psycopg2vertica.tz module");
+        PyErr_SetString(PyExc_ImportError, "can't import psycopg2vertica.tz module");
         return;
     }
     pyPsycopgTzLOCAL =

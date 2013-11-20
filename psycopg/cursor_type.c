@@ -1721,7 +1721,7 @@ cursor_traverse(cursorObject *self, visitproc visit, void *arg)
 PyTypeObject cursorType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.cursor",
+    "psycopg2vertica._psycopg.cursor",
     sizeof(cursorObject),
     0,
     cursor_dealloc, /*tp_dealloc*/

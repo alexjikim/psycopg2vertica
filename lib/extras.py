@@ -34,11 +34,11 @@ try:
 except:
     logging = None
 
-from psycopg2 import DATETIME, DataError
-from psycopg2 import extensions as _ext
-from psycopg2.extensions import cursor as _cursor
-from psycopg2.extensions import connection as _connection
-from psycopg2.extensions import adapt as _A
+from psycopg2vertica import DATETIME, DataError
+from psycopg2vertica import extensions as _ext
+from psycopg2vertica.extensions import cursor as _cursor
+from psycopg2vertica.extensions import connection as _connection
+from psycopg2vertica.extensions import adapt as _A
 
 
 class DictCursorBase(_cursor):
@@ -485,8 +485,8 @@ def register_tstz_w_secs(oids=None, conn_or_curs=None):
 
 
 import select
-from psycopg2.extensions import POLL_OK, POLL_READ, POLL_WRITE
-from psycopg2 import OperationalError
+from psycopg2vertica.extensions import POLL_OK, POLL_READ, POLL_WRITE
+from psycopg2vertica import OperationalError
 
 def wait_select(conn):
     """Wait until a connection or cursor has data available.

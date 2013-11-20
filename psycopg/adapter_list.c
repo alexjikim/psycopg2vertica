@@ -235,7 +235,7 @@ list_del(PyObject* self)
 static PyObject *
 list_repr(listObject *self)
 {
-    return PyString_FromFormat("<psycopg2._psycopg.List object at %p>", self);
+    return PyString_FromFormat("<psycopg2vertica._psycopg.List object at %p>", self);
 }
 
 /* object type */
@@ -246,7 +246,7 @@ list_repr(listObject *self)
 PyTypeObject listType = {
     PyObject_HEAD_INIT(NULL)
     0,
-    "psycopg2._psycopg.List",
+    "psycopg2vertica._psycopg.List",
     sizeof(listObject),
     0,
     list_dealloc, /*tp_dealloc*/

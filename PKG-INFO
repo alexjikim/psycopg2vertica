@@ -1,5 +1,5 @@
 Metadata-Version: 1.0
-Name: psycopg2
+Name: psycopg2vertica
 Version: 2.2.1
 Summary: Python-PostgreSQL Database Adapter
 Home-page: http://initd.org/tracker/psycopg
